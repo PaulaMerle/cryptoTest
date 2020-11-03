@@ -1,0 +1,49 @@
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+*.log
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
+
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# logback
+logback.out.xml
+
+CryptoBack/src/main/resources/public/
+CryptoBack/target
+crypto-front/dist/
+crypto-front/node/
+crypto-front/node_modules/
+crypto-front/npm-debug.log
+crypto-front/target
+
+!.mvn/wrapper/maven-wrapper.jar
