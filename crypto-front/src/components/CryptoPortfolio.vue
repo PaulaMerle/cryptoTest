@@ -38,15 +38,16 @@ export default {
   props: ["portfolioItems", "dataLoading", "errorMessage"],
   emits: ["update-data"],
   setup(props, context) {
+    /* eslint-disable */
     function deleteCrypto(id) {
       if (confirm("Kindel, et soovid kustutada?"))
         CryptoDataService.delete(id)
           .then((response) => {
-            //           console.log(response.data);
+            console.log(response.data);
             context.emit("update-data");
           })
           .catch((e) => {
-            //          console.log(e);
+            console.log(e);
           });
     }
     return { deleteCrypto };
