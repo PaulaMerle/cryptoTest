@@ -16,10 +16,6 @@
     <description>SpringBoot</description>
     <packaging>jar</packaging>
 
-    <properties>
-        <java.version>12</java.version>
-    </properties>
-
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
