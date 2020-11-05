@@ -47,3 +47,4 @@ crypto-front/npm-debug.log
 crypto-front/target
 
 !.mvn/wrapper/maven-wrapper.jar
+/CryptoBack/src/main/resources/application.properties
