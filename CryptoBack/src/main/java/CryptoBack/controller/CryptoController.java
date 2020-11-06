@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
 
-// @CrossOrigin(origins = "http://localhost:8082") // see on frondi port
+@CrossOrigin(origins = "*") // see on dev frondi port
 @RestController
 @RequestMapping("/api")
 public class CryptoController {
