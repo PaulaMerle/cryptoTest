@@ -1,4 +1,4 @@
-package CryptoBack.model;
+package ee.videvik.CryptoBack.model;
 
 import javax.persistence.*;
 

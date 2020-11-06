@@ -1,8 +1,7 @@
-package CryptoBack.service;
+package ee.videvik.CryptoBack.service;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -46,7 +45,7 @@ public class TickerValueService {
         RestTemplate restTemplate = new RestTemplate();
         String[] cryptoTicker = restTemplate.getForObject(uri, String[].class);
         double lastPrice = Double.parseDouble(cryptoTicker[6]);
-        if (currency == "Ripple") {
+        if (currency.equals("Ripple")) {
             lastPrice = lastPrice * TickerValueService.getEurRate();
         }
         double marketValue = amount * lastPrice;

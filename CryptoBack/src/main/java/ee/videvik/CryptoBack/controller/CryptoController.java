@@ -1,8 +1,8 @@
-package CryptoBack.controller;
+package ee.videvik.CryptoBack.controller;
 
-import CryptoBack.model.Crypto;
-import CryptoBack.repository.CryptoRepository;
-import CryptoBack.service.TickerValueService;
+import ee.videvik.CryptoBack.model.Crypto;
+import ee.videvik.CryptoBack.repository.CryptoRepository;
+import ee.videvik.CryptoBack.service.TickerValueService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

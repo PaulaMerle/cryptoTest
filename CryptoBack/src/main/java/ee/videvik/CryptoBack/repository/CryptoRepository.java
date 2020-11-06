@@ -1,7 +1,7 @@
-package CryptoBack.repository;
+package ee.videvik.CryptoBack.repository;
 
 
-import CryptoBack.model.Crypto;
+import ee.videvik.CryptoBack.model.Crypto;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 
