@@ -34,8 +34,8 @@ public class IndexController implements ErrorController {
     /**
      * Supports the HTML Error View
      *
-     * @param request
-     * @return
+     * @param request path
+     * @return path
      */
     @RequestMapping(value = ERROR_PATH, produces = "text/html")
     public ModelAndView errorHtml(HttpServletRequest request) {
