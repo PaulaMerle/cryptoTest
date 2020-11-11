@@ -1,1 +1,1 @@
-web: java -Dspring.profiles.active=prod -Dserver.port=$PORT -jar CryptoBack/target/CryptoBack-0.0.1-SNAPSHOT.jar
+web: java -Dspring.profiles.active=prod -Dserver.port=$PORT $JAVA_OPTS -jar CryptoBack/target/CryptoBack-0.0.1-SNAPSHOT.jar
