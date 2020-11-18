@@ -22,13 +22,17 @@ public class CryptoController {
     CryptoRepository cryptoRepository;
 
     private void getCryptoValue(Crypto crypto) throws IOException {
-
+        System.out.println("viga 8: ");
         double currentMarketValue = Math.round(TickerValueService.getMarketValue
                 (crypto.getAmount(), crypto.getCurrency()) * 100) / 100.0;
+        System.out.println("viga 9: ");
         try {
-            crypto.setValue(currentMarketValue);
+            System.out.println("viga 10: ");
+     //      crypto.setValue(currentMarketValue);
+            crypto.setValue(123.45);
+            System.out.println("viga 11: ");
         } catch (Exception e) {
-            System.out.println("Viga 1: " + e.getMessage());
+            System.out.println("Viga 12: " + e.getMessage());
             e.printStackTrace();
         }
     }
@@ -48,14 +52,15 @@ public class CryptoController {
                 try {
                     System.out.println("Viga 4: ");
                     getCryptoValue(crypto);
+                    System.out.println("Viga 5: ");
                 } catch (IOException e) {
-                    System.out.println("Viga 5: " + e.getMessage());
+                    System.out.println("Viga 6: " + e.getMessage());
                     e.printStackTrace();
                 }
             });
             return new ResponseEntity<>(cryptos, HttpStatus.OK);
         } catch (Exception e) {
-            System.out.println("Viga 6: " + e.getMessage());
+            System.out.println("Viga 7: " + e.getMessage());
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
