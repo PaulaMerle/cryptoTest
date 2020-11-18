@@ -25,7 +25,11 @@ public class CryptoController {
 
         double currentMarketValue = Math.round(TickerValueService.getMarketValue
                 (crypto.getAmount(), crypto.getCurrency()) * 100) / 100.0;
-        crypto.setValue(currentMarketValue);
+        try {
+            crypto.setValue(currentMarketValue);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @GetMapping("/cryptos")
