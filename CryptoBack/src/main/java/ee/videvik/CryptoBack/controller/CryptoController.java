@@ -23,13 +23,13 @@ public class CryptoController {
 
     private void getCryptoValue(Crypto crypto) throws IOException {
         System.out.println("viga 8: ");
-        double currentMarketValue = Math.round(TickerValueService.getMarketValue
-                (crypto.getAmount(), crypto.getCurrency()) * 100) / 100.0;
+        double currentMarketValue = 123.45;
+        //Math.round(TickerValueService.getMarketValue
+        //(crypto.getAmount(), crypto.getCurrency()) * 100) / 100.0;
         System.out.println("viga 9: ");
         try {
             System.out.println("viga 10: ");
-     //      crypto.setValue(currentMarketValue);
-            crypto.setValue(123.45);
+            crypto.setValue(currentMarketValue);
             System.out.println("viga 11: ");
         } catch (Exception e) {
             System.out.println("Viga 12: " + e.getMessage());
