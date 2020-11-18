@@ -41,14 +41,21 @@ public class TickerValueService {
             default:
                 System.out.println("Currency not found");
         }
+        System.out.println("Probla 1: ");
         String uri = "https://api-pub.bitfinex.com/v2/ticker/" + symbol;
+        System.out.println("Probla 2: ");
         RestTemplate restTemplate = new RestTemplate();
         String[] cryptoTicker = restTemplate.getForObject(uri, String[].class);
+        System.out.println("Probla 3: ");
         double lastPrice = Double.parseDouble(cryptoTicker[6]);
+        System.out.println("Probla 4: ");
         if (currency.equals("Ripple")) {
+            System.out.println("Probla 5: ");
             lastPrice = lastPrice * TickerValueService.getEurRate();
+            System.out.println("Probla 6: ");
         }
         double marketValue = amount * lastPrice;
+        System.out.println("Probla 7: ");
 
         return marketValue;
     }
