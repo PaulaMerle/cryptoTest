@@ -42,7 +42,8 @@ public class TickerValueService {
                 System.out.println("Currency not found");
         }
         System.out.println("Probla 1: ");
-        String uri = "https://api-pub.bitfinex.com/v2/ticker/" + symbol;
+      //  String uri = "https://api-pub.bitfinex.com/v2/ticker/" + symbol;
+        String uri = "https://api-pub.bitfinex.com/v2/ticker/tBTCEUR";
         System.out.println("Probla 2: ");
         RestTemplate restTemplate = new RestTemplate();
         String[] cryptoTicker = restTemplate.getForObject(uri, String[].class);
