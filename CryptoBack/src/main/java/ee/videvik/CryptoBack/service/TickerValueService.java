@@ -2,15 +2,13 @@ package ee.videvik.CryptoBack.service;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
+import org.springframework.web.client.RestTemplate;
 
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
-
-
-import org.springframework.web.client.RestTemplate;
 
 import static com.google.gson.JsonParser.parseReader;
 
@@ -42,9 +40,9 @@ public class TickerValueService {
                 System.out.println("Currency not found");
         }
         System.out.println("Probla 1: ");
-      //  String uri = "https://api-pub.bitfinex.com/v2/ticker/" + symbol;
-        String uri = "https://api-pub.bitfinex.com/v2/ticker/tBTCEUR";
+        String uri = "https://api-pub.bitfinex.com/v2/ticker/" + symbol;
         System.out.println("Probla 2: ");
+
         RestTemplate restTemplate = new RestTemplate();
         String[] cryptoTicker = restTemplate.getForObject(uri, String[].class);
         System.out.println("Probla 3: ");
