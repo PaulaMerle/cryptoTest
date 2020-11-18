@@ -40,12 +40,13 @@ public class CryptoController {
                 try {
                     getCryptoValue(crypto);
                 } catch (IOException e) {
+                    System.out.println("Viga 1" + e.getMessage());
                     e.printStackTrace();
                 }
             });
             return new ResponseEntity<>(cryptos, HttpStatus.OK);
         } catch (Exception e) {
-            System.out.println(e.getMessage());
+            System.out.println("Viga 2" + e.getMessage());
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
