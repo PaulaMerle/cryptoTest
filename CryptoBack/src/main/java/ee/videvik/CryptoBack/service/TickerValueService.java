@@ -40,7 +40,7 @@ public class TickerValueService {
                 System.out.println("Currency not found");
         }
         System.out.println("Probla 1: ");
-        String uri = "http://ip-api.com/json/";
+        String uri = "http://api-pub.bitfinex.com/v2/ticker/" + symbol;
         System.out.println("Probla 2: ");
 
         RestTemplate restTemplate = new RestTemplate();
