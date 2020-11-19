@@ -15,6 +15,7 @@ import static com.google.gson.JsonParser.parseReader;
 
 public class TickerValueService {
 
+
     // EUR rate query for Ripple
     public static double getEurRate() throws IOException {
         String url = "https://www.freeforexapi.com/api/live?pairs=USDEUR";
