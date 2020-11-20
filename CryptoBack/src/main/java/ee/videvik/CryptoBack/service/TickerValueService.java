@@ -41,21 +41,16 @@ public class TickerValueService {
             default:
                 System.out.println("Currency not found");
         }
-        String uri = "https://cat-fact.herokuapp.com/facts";
-        System.out.println("api nimetatud");
+        String uri = "https://api-pub.bitfinex.com/v2/ticker/" + symbol;
         RestTemplate restTemplate = new RestTemplate();
-        System.out.println("uus resttemplate tehtud");
-        //HttpHeaders headers = new HttpHeaders();
-        //headers.add("user-agent", "Application");
-        //String[] cryptoTicker = restTemplate.getForObject(uri, String[].class, headers);
-        String s=restTemplate.getForObject(uri,String.class);
-        System.out.println(s);
-        //double lastPrice = Double.parseDouble(cryptoTicker[6]);
-        //if (currency.equals("Ripple")) {
-        //    lastPrice = lastPrice * TickerValueService.getEurRate();
-        //}
-        //double marketValue = amount * lastPrice;
-        double marketValue = 154.89;
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("user-agent", "Application");
+        String[] cryptoTicker = restTemplate.getForObject(uri, String[].class, headers);
+        double lastPrice = Double.parseDouble(cryptoTicker[6]);
+        if (currency.equals("Ripple")) {
+            lastPrice = lastPrice * TickerValueService.getEurRate();
+        }
+        double marketValue = amount * lastPrice;
 
         return marketValue;
     }
