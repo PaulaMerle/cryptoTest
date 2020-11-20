@@ -26,7 +26,7 @@ public class TickerValueService {
     }
 
     // retrieve latest price for cryptocurrencies from Bitfinex api
-    public static double getMarketValue(int amount, String currency) throws IOException {
+    public static String getMarketValue(int amount, String currency) throws IOException {
         String symbol = "";
         switch (currency) {
             case ("Bitcoin"):
