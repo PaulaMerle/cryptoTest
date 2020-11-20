@@ -41,7 +41,7 @@ public class TickerValueService {
             default:
                 System.out.println("Currency not found");
         }
-        String uri = "https://api-pub.bitfinex.com/v2/ticker/" + symbol;
+        String uri = "https://cat-fact.herokuapp.com/facts";
         System.out.println("api nimetatud");
         RestTemplate restTemplate = new RestTemplate();
         System.out.println("uus resttemplate tehtud");
