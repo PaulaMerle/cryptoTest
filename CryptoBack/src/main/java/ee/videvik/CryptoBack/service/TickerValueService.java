@@ -61,17 +61,17 @@ public class TickerValueService {
         // here the api call receives 403 forbidden [error 1010], meaning
         // The owner of this website has banned access based on your browser's signature
         String uri = "https://api-pub.bitfinex.com/v2/ticker/" + symbol;
-        RestTemplate restTemplate = new RestTemplate();
+        /* RestTemplate restTemplate = new RestTemplate();
         HttpHeaders headers = new HttpHeaders();
         headers.add("user-agent",
                 "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 " +
                         "(KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36");
         headers.add("Accept", "*/*");
-        String[] cryptoTicker = restTemplate.getForObject(uri, String[].class, headers);
+        /* String[] cryptoTicker = restTemplate.getForObject(uri, String[].class, headers);
         double lastPrice = Double.parseDouble(cryptoTicker[6]);
         if (currency.equals("Ripple")) {
             lastPrice = lastPrice * TickerValueService.getEurRate();
-        }
+        } */
         double marketValue = 123.45; // amount * lastPrice;
 
         return marketValue;
