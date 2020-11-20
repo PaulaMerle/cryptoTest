@@ -42,17 +42,21 @@ public class TickerValueService {
                 System.out.println("Currency not found");
         }
         String uri = "https://api-pub.bitfinex.com/v2/ticker/" + symbol;
+        System.out.println("api nimetatud");
         RestTemplate restTemplate = new RestTemplate();
-        HttpHeaders headers = new HttpHeaders();
-        headers.add("user-agent", "Application");
-        String[] cryptoTicker = restTemplate.getForObject(uri, String[].class, headers);
-        double lastPrice = Double.parseDouble(cryptoTicker[6]);
-        if (currency.equals("Ripple")) {
-            lastPrice = lastPrice * TickerValueService.getEurRate();
-        }
-        double marketValue = amount * lastPrice;
+        System.out.println("uus resttemplate tehtud");
+        //HttpHeaders headers = new HttpHeaders();
+        //headers.add("user-agent", "Application");
+        //String[] cryptoTicker = restTemplate.getForObject(uri, String[].class, headers);
+        String s=restTemplate.getForObject(uri,String.class);
+        System.out.println(s);
+        //double lastPrice = Double.parseDouble(cryptoTicker[6]);
+        //if (currency.equals("Ripple")) {
+        //    lastPrice = lastPrice * TickerValueService.getEurRate();
+        //}
+        //double marketValue = amount * lastPrice;
 
-        return marketValue;
+        return s;
     }
 
     // api connection setup with java.urlConnection
