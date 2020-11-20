@@ -26,7 +26,7 @@ public class TickerValueService {
     }
 
     // retrieve latest price for cryptocurrencies from Bitfinex api
-    public static String getMarketValue(int amount, String currency) throws IOException {
+    public static double getMarketValue(int amount, String currency) throws IOException {
         String symbol = "";
         switch (currency) {
             case ("Bitcoin"):
@@ -55,8 +55,9 @@ public class TickerValueService {
         //    lastPrice = lastPrice * TickerValueService.getEurRate();
         //}
         //double marketValue = amount * lastPrice;
+        double marketValue = 154.89;
 
-        return s;
+        return marketValue;
     }
 
     // api connection setup with java.urlConnection
