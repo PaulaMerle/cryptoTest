@@ -22,44 +22,35 @@ public class CryptoController {
     CryptoRepository cryptoRepository;
 
     private void getCryptoValue(Crypto crypto) throws IOException {
-        System.out.println("viga 8: ");
         double currentMarketValue = Math.round(TickerValueService.getMarketValue
         (crypto.getAmount(), crypto.getCurrency()) * 100) / 100.0;
-        System.out.println("viga 9: ");
         try {
-            System.out.println("viga 10: ");
             crypto.setValue(currentMarketValue);
-            System.out.println("viga 11: ");
         } catch (Exception e) {
-            System.out.println("Viga 12: " + e.getMessage());
+            System.out.println(e.getMessage());
             e.printStackTrace();
         }
     }
 
     @GetMapping("/cryptos")
     public ResponseEntity<List<Crypto>> getAllCryptos() throws IOException {
-        System.out.println("Viga 1: ");
 
         try {
             List<Crypto> cryptos = cryptoRepository.findAll();
-            System.out.println("Viga 2: ");
             if (cryptos.isEmpty()) {
                 return new ResponseEntity<>(HttpStatus.NO_CONTENT);
             }
-            System.out.println("Viga 3: ");
             cryptos.forEach(crypto -> {
                 try {
-                    System.out.println("Viga 4: ");
                     getCryptoValue(crypto);
-                    System.out.println("Viga 5: ");
                 } catch (IOException e) {
-                    System.out.println("Viga 6: " + e.getMessage());
+                    System.out.println(e.getMessage());
                     e.printStackTrace();
                 }
             });
             return new ResponseEntity<>(cryptos, HttpStatus.OK);
         } catch (Exception e) {
-            System.out.println("Viga 7: " + e.getMessage());
+            System.out.println(e.getMessage());
             return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
