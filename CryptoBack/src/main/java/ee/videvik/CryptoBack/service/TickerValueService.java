@@ -72,7 +72,7 @@ public class TickerValueService {
         if (currency.equals("Ripple")) {
             lastPrice = lastPrice * TickerValueService.getEurRate();
         }
-        double marketValue = 123.45 // amount * lastPrice;
+        double marketValue = 123.45; // amount * lastPrice;
 
         return marketValue;
     }
