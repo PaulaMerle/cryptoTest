@@ -2,6 +2,7 @@ package ee.videvik.CryptoBack.service;
 
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
+import org.springframework.http.HttpHeaders;
 import org.springframework.web.client.RestTemplate;
 
 import java.io.IOException;
@@ -16,7 +17,7 @@ import static com.google.gson.JsonParser.parseReader;
 public class TickerValueService {
 
     // api connection setup with java.urlConnection
-    public static String connectUrl (String url) throws IOException {
+    public static String connectUrl(String url) throws IOException {
         JsonObject obj = new JsonObject();
         URL connectTo = new URL(url);
         URLConnection request = connectTo.openConnection();
@@ -61,7 +62,12 @@ public class TickerValueService {
         // The owner of this website has banned access based on your browser's signature
         String uri = "https://api-pub.bitfinex.com/v2/ticker/" + symbol;
         RestTemplate restTemplate = new RestTemplate();
-        String[] cryptoTicker = restTemplate.getForObject(uri, String[].class);
+        HttpHeaders headers = new HttpHeaders();
+        headers.add("user-agent",
+                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 " +
+                        "(KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36");
+        headers.add("Accept", "*/*");
+        String[] cryptoTicker = restTemplate.getForObject(uri, String[].class, headers);
         double lastPrice = Double.parseDouble(cryptoTicker[6]);
         if (currency.equals("Ripple")) {
             lastPrice = lastPrice * TickerValueService.getEurRate();
