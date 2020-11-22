@@ -66,7 +66,7 @@ public class TickerValueService {
         headers.add("user-agent",
                 "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 " +
                         "(KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36");
-        headers.add("Accept", "*/*");  // take away the escape when omitting commentlines
+        headers.add("Accept", "	application/json, text/plain, */*");
         String[] cryptoTicker = restTemplate.getForObject(uri, String[].class, headers);
         double lastPrice = Double.parseDouble(cryptoTicker[6]);
         if (currency.equals("Ripple")) {
