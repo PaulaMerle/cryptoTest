@@ -1,5 +1,7 @@
-# cryptoTest 
-...is written using Vue 3 in client-side, Java in server-side and PostgreSQL as database. App is published in Heroku and deployed via GitHub repo. 
+# CryptoTest 
+is written using Vue 3 in client-side, Java in server-side and PostgreSQL as database. App is published in Heroku and deployed via GitHub repo. 
+
+App can be found from: https://mindly-crypto-test.herokuapp.com/
 
 # Description of the project:
 
@@ -19,16 +21,19 @@ I sold my cryptocurrency and no longer need to see it on my list
 - As a user i open portfolio management webpage
 - The system shows me a list of previously saved portfolio items and input form to enter a new portfolio item. My portfolio has the following items saved:
 
-Cryptocurrency	Amount	Date of purchase	Wallet location	Current market value (EUR)	Option
-Bitcoin	10	20.06.2018	My personal hardware wallet	62 314	Delete
-Ethereum	5	21.06.2018	My personal wallet	2300	Delete
+| Attempt | Cryptocurrency |	Amount |	Date of purchase |	Wallet location |	Current market value (EUR) |	Option |
+|---------|:---------------:|:-------:|:-----------------:|:---------------:|:--------------------------:|:-------:|
+| Seconds | Bitcoin |	10 |	20.06.2018 | My personal hardware wallet |	62 314 |	Delete |
+| Seconds | Ethereum |	5 |	21.06.2018 |	My personal walle |	2300 |	Delete |
 - As a user i click Delete on Ethereum line
 - The system prompts me to confirm that i am sure to delete the new item
 - As a user i confirm
 - The system removes the item from the list
 - The system shows me the following table
-Cryptocurrency	Amount	Date of purchase	Wallet location	Current market value (EUR)	Option
-Bitcoin	10	20.06.2018	My personal hardware wallet	62 314	Delete
+
+| Attempt | Cryptocurrency |	Amount |	Date of purchase |	Wallet location |	Current market value (EUR) |	Option |
+|---------|:---------------:|:-------:|:-----------------:|:---------------:|:--------------------------:|:-------:|
+| Seconds | Bitcoin |	10 |	20.06.2018 | My personal hardware wallet |	62 314 |	Delete |
 ## Non functional requirements
 - Frontend layer uses JavaScript framework (Vue, AngularJS, React, etc...) and communicates with backend by calling JSON rest services
 - Backend system is written in Java using Spring Boot framework or Ruby with Ruby on Rails
