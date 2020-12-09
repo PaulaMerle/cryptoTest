@@ -4,7 +4,7 @@
     <td>{{ amount }}</td>
     <td>{{ date }}</td>
     <td>{{ location }}</td>
-    <td>{{ value }}</td>
+    <td>{{ value.toFixed(2) }}</td>
     <td><base-button @click="deleteTheCrypto">Delete</base-button></td>
   </tr>
 </template>
