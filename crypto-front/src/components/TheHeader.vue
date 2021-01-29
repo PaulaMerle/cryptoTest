@@ -1,6 +1,6 @@
 <template>
   <header>
-    <h1>Mindly krüptoportfell</h1>
+    <h1>Krüptoportfell</h1>
   </header>
 </template>
 

@@ -86,5 +86,4 @@ public class TickerValueService {
 
         return round(marketValue);
     }
-
 }
