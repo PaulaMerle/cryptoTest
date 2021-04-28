@@ -8,9 +8,9 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <artifactId>CryptoBack</artifactId>
+    <artifactId>crypto_back</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>CryptoBack</name>
+    <name>crypto_back</name>
     <description>SpringBoot</description>
     <packaging>jar</packaging>
 

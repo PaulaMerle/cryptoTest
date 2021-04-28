@@ -38,13 +38,13 @@ build/
 # logback
 logback.out.xml
 
-CryptoBack/src/main/resources/public/
-CryptoBack/target
-crypto-front/dist/
-crypto-front/node/
+crypto_back/src/main/resources/public/
+crypto_back/target
+crypto_front/dist/
+crypto_front/node/
 crypto-front/node_modules/
 crypto-front/npm-debug.log
 crypto-front/target
 
 !.mvn/wrapper/maven-wrapper.jar
-/CryptoBack/src/main/resources/application.properties
+/crypto_back/src/main/resources/application.properties
