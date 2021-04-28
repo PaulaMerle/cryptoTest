@@ -1,4 +1,4 @@
-package ee.videvik.CryptoBack.model;
+package ee.videvik.crypto_back.model;
 
 import javax.persistence.*;
 
@@ -28,6 +28,8 @@ public class Crypto {
 
     public Crypto() {
     }
+
+// tee konstruktorid ümber nii, et ainult üks initsialiseeriks ja ülejäänud kutsuvad seda välja -> this();
 
     public Crypto(int id, String currency, int amount, String location, String date, double value) {
         this.id = id;

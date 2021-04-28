@@ -1,4 +1,4 @@
-package ee.videvik.CryptoBack.controller;
+package ee.videvik.crypto_back.controller;
 
 import org.springframework.boot.web.error.ErrorAttributeOptions;
 import org.springframework.boot.web.servlet.error.DefaultErrorAttributes;

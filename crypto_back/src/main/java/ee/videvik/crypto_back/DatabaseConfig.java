@@ -1,4 +1,4 @@
-package ee.videvik.CryptoBack;
+package ee.videvik.crypto_back;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;

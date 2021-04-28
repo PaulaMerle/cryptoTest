@@ -9,7 +9,7 @@
     <packaging>pom</packaging>
 
     <name>cryptoApp</name>
-    <description>Test application for Mindly</description>
+    <description>application using Vue, Java, PostGre DB</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -23,8 +23,8 @@
     </properties>
 
     <modules>
-        <module>crypto-front</module>
-        <module>CryptoBack</module>
+        <module>crypto_front</module>
+        <module>crypto_back</module>
     </modules>
 
 </project>
